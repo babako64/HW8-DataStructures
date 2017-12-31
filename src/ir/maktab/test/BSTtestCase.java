@@ -5,9 +5,15 @@ import org.junit.Test;
 import ir.maktab.bst.BST;
 
 import static org.junit.Assert.*;
-
+/**
+ * 
+ * @author Babak
+ *
+ */
 public class BSTtestCase {
-
+	/**
+	 * Test BST getMinElement method
+	 */
 	@Test
 	public void getMinTest() {
 		
@@ -19,6 +25,9 @@ public class BSTtestCase {
 		int t = temp.intValue();
 		assertEquals(4,t);
 	}
+	/**
+	 * Test BST getMaxElement method
+	 */
 	@Test
 	public void getMaxTest() {
 		
@@ -30,7 +39,9 @@ public class BSTtestCase {
 		int t = temp.intValue();
 		assertEquals(6,t);
 	}
-	
+	/**
+	 * Test BST contains method
+	 */
 	@Test
 	public void contain() {
 		

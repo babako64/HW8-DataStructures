@@ -1,5 +1,11 @@
 package ir.maktab.deque;
 
+/**
+ * 
+ * @author Babak
+ *
+ * @param <E>
+ */
 public class Qnode<E> {
 	private E data;
 	private Qnode<E> next;

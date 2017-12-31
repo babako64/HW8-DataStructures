@@ -3,12 +3,21 @@ package ir.maktab.deque;
 import ir.maktab.collection.Collection;
 import ir.maktab.exceptions.UnderflowException;
 import ir.maktab.stack.Node;
-
+/**
+ * 
+ * @author Babak
+ *
+ * @param <E>
+ */
 public class Deque<E> implements Collection<E> {
 	private Qnode<E> first=null;
 	private Qnode<E> last=null;
 	private int size=0;
 	
+	/**
+	 * Insert element to back of stack
+	 * @param var
+	 */
 	public void pushBack(E var) {
 		
 		Qnode<E> node = new Qnode<>();
@@ -27,6 +36,10 @@ public class Deque<E> implements Collection<E> {
 			size++;
 		}
 	}
+	/**
+	 * Insert element to front of stack
+	 * @param var
+	 */
 	public void pushFront(E var) {
 		Qnode<E> node = new Qnode<>();
 		if(first!=null) {
@@ -45,12 +58,24 @@ public class Deque<E> implements Collection<E> {
 			size++;
 		}
 	}
+	/**
+	 * Return front element
+	 * @return
+	 */
 	public E front() {
 		return first.getData();
 	}
+	/**
+	 * Return back element
+	 * @return
+	 */
 	public E back() {
 		return last.getData();
 	}
+	/**
+	 * Return first element
+	 * @return
+	 */
 	public E popFront() {	
 		Qnode<E> temp;
 		if(!isEmplty()) {
@@ -69,6 +94,10 @@ public class Deque<E> implements Collection<E> {
 		}
 		return temp.getData();
 	}
+	/**
+	 * Return last element
+	 * @return
+	 */
 	public E popBack() {
 		Qnode<E> temp;
 		if(!isEmplty()) {
@@ -87,11 +116,16 @@ public class Deque<E> implements Collection<E> {
 		}
 		return temp.getData();
 	}
+	/**
+	 * Return index i
+	 * @param i
+	 * @return
+	 */
 	public E getElement(int i) {
 		Qnode<E> temp ;
 		if(i<size) {
 		temp=first;
-		for(int J=2;J<=size;J++) {
+		for(int J=2;J<=i;J++) {
 			
 			temp=temp.getNext();
 		}

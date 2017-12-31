@@ -1,5 +1,11 @@
 package ir.maktab.stack;
 
+/**
+ * 
+ * @author Babak 
+ *
+ * @param <E>
+ */
 public class Node<E> {
 	private E data;
 	private Node<E> next;

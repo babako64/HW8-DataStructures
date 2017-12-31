@@ -1,5 +1,11 @@
 package ir.maktab.bst;
 
+/**
+ * 
+ * @author Babak
+ *
+ * @param <E>
+ */
 public class Bnode<E> {
 	private E data;
 	private Bnode<E> left;

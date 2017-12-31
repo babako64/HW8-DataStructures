@@ -2,6 +2,12 @@ package ir.maktab.bst;
 
 import ir.maktab.collection.Collection;
 
+/**
+ * 
+ * @author Babak
+ *
+ * @param <E>
+ */
 public class BST<E extends Comparable<E>> implements Collection<E>,Comparable<E> {
 	Bnode<E> root=null ;
 	private int size=0;
@@ -23,7 +29,9 @@ public class BST<E extends Comparable<E>> implements Collection<E>,Comparable<E>
 		
 		return size==0?true:false;
 	}
-
+	/**
+	 * Return element if contain in deque
+	 */
 	@Override
 	public boolean contains(E var) {
 		
@@ -45,6 +53,10 @@ public class BST<E extends Comparable<E>> implements Collection<E>,Comparable<E>
 		
 		return false;
 	}
+	/**
+	 * Add element to deque
+	 * @param var
+	 */
 	public void add(E var) {
 	
 		Bnode<E> temp;
@@ -55,7 +67,7 @@ public class BST<E extends Comparable<E>> implements Collection<E>,Comparable<E>
 			root=node;
 			root.setLeft(null);
 			root.setRight(null);
-			System.out.println("root");
+			//System.out.println("root");
 		}else {
 			temp=root;
 			while(true) {
@@ -64,7 +76,7 @@ public class BST<E extends Comparable<E>> implements Collection<E>,Comparable<E>
 					
 					if(temp.getLeft()==null) {
 						temp.setLeft(node);
-						System.out.println("L add");
+						//System.out.println("L add");
 						size++;
 						return;
 					}
@@ -73,7 +85,7 @@ public class BST<E extends Comparable<E>> implements Collection<E>,Comparable<E>
 					
 					if(temp.getRight()==null) {
 						temp.setRight(node);
-						System.out.println("R add");
+						//System.out.println("R add");
 						size++;
 						return;
 					}
@@ -84,6 +96,10 @@ public class BST<E extends Comparable<E>> implements Collection<E>,Comparable<E>
 			
 		}
 	}
+	/**
+	 * Return min element of deque
+	 * @return
+	 */
 	public E getMinElement() {
 		
 		Bnode<E> temp=root;
@@ -98,6 +114,10 @@ public class BST<E extends Comparable<E>> implements Collection<E>,Comparable<E>
 		
 		return temp.getData();
 	}
+	/**
+	 * Return max element of deque
+	 * @return
+	 */
 	public E getMaxElement() {
 		
 		Bnode<E> temp=root;
@@ -112,7 +132,9 @@ public class BST<E extends Comparable<E>> implements Collection<E>,Comparable<E>
 		
 		return temp.getData();
 	}
-
+	/**
+	 * compare to element
+	 */
 	@Override
 	public int compareTo(E arg0) {
 		

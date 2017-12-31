@@ -1,11 +1,16 @@
 package ir.maktab.test;
 import org.junit.Test;
-
 import ir.maktab.deque.Deque;
-
 import static org.junit.Assert.*;
+/**
+ * 
+ * @author Babak
+ *
+ */
 public class QtestCase {
-
+	/**
+	 * Test deque popFront method
+	 */
 	@Test
 	public void QpopFront() {
 		
@@ -17,7 +22,9 @@ public class QtestCase {
 		int t = temp.intValue();
 		assertEquals(3,t);
 	}
-	
+	/**
+	 * Test deque popBack method
+	 */
 	@Test
 	public void QpopBack() {
 		
@@ -29,7 +36,9 @@ public class QtestCase {
 		int t = temp.intValue();
 		assertEquals(2,t);
 	}
-	
+	/**
+	 * Test deque popSize method
+	 */
 	@Test
 	public void QpopSize() {
 		
